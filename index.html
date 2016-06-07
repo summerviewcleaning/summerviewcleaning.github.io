@@ -1,0 +1,119 @@
+<!-- Copyright (C) Summer View 2016-->
+<!DOCTYPE html>
+<html ng-app="app" lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Window cleaning Weber, Davis, and Morgan counties. Contact at summerviewcleaning@gmail.com" />
+	<meta name="author" content="Summer View">
+
+	<!--favicon-->
+	<link rel="icon" href="files/images/favicon.ico" type="image/gif" sizes="16x16">
+
+	<!--jquery-->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	
+	<!--bootstrap-->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+	<!--font awesome-->
+	<script src="https://use.fontawesome.com/59cbb8cc24.js"></script>
+	
+	<!--angular-->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js" /></script>
+	<script src="https://code.angularjs.org/1.4.7/angular-resource.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+
+	<script src="app.js"></script>
+	<script src="controllers.js"></script>
+	
+	<link href="css/index.css" rel="stylesheet" />
+	<link href="css/bootstrap-social.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" ng-controller="navBarCtrl">
+		<!-- Navigation -->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a href="#/">
+							<img class="logo navbar-brand" 
+								 ng-src="{{ logo }}"/>
+						</a>
+					</div>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li>
+								<a href="#/">{{ home }}</a>
+							</li>
+							<li>
+								<a href="#/about">{{ about }}</a>
+							</li>
+							<li>
+								<a href="#/contact">{{ contact }}</a>
+							</li>
+						</ul>
+					</div>
+					<!-- /.navbar-collapse -->
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<div ng-view></div>
+	
+	<!-- Social Icons -->
+	<socialIcons ng-controller="socialIcons">
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-md-12">
+					<a class="btn btn-social-icon btn-facebook">
+						<span class="fa fa-facebook"></span>
+					</a>
+					<a class="btn btn-social-icon btn-google">
+						<span class="fa fa-google"></span>
+					</a>
+					<a class="btn btn-social-icon btn-pinterest">
+						<span class="fa fa-pinterest"></span>
+					</a>
+					<a class="btn btn-social-icon btn-twitter">
+						<span class="fa fa-twitter"></span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</socialIcons>
+
+	<!-- Footer -->
+	<footer ng-controller="footerCtrl">
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-md-12">
+					<p ng-bind-html="copyRight"></p>
+				</div>
+				<div class="col-md-12">
+					<p>{{ footerInfo }}</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+</body>
+
+</html>
