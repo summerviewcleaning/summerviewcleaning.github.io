@@ -2,15 +2,25 @@ app.controller('navBarCtrl', function ($scope) {
 	
 	$scope.home = "Home";
 	$scope.about = "About";
-	$scope.contact = "Contact";
-	$scope.logo = "files/images/logo.jpg";
+	$scope.freequote = "Free Quote";
 	
 }).controller('homeCtrl', function ($scope) {
 	
 	$scope.title = "Summer View | Window Cleaning";
-	$scope.pageHeader = "Summer View";
-	$scope.pageSubHeader = "Window Cleaning";
-	$scope.loading = "Loading...";
+
+	$scope.businessName = "Business Name or Tagline";
+	$scope.businessParagraph = "This is a template that is great for small businesses. It doesn't have too much fancy flare to it, but it makes a great use of the standard Bootstrap core components. Feel free to use this template for any project you want!";
+	$scope.quoteButton = "Call to Action!";
+	$scope.businessTagline = "This is a well that is a great spot for a business tagline or phone number for easy access!";
+	$scope.headingOne = "Heading 1";
+	$scope.headingOneParagraph = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem nisi accusamus error velit animi non ipsa placeat. Recusandae, suscipit, soluta quibusdam accusamus a veniam quaerat eveniet eligendi dolor consectetur.";
+	$scope.headingOneMoreInfo = "More Info";
+	$scope.headingTwo = "Heading 2";
+	$scope.headingTwoParagraph = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem nisi accusamus error velit animi non ipsa placeat. Recusandae, suscipit, soluta quibusdam accusamus a veniam quaerat eveniet eligendi dolor consectetur.";
+	$scope.headingTwoMoreInfo = "More Info";
+	$scope.headingThree = "Heading 3";
+	$scope.headingThreeParagraph = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem nisi accusamus error velit animi non ipsa placeat. Recusandae, suscipit, soluta quibusdam accusamus a veniam quaerat eveniet eligendi dolor consectetur.";
+	$scope.headingThreeMoreInfo = "More Info";
 
 }).controller('aboutCtrl', function ($scope) {
 	
@@ -19,9 +29,9 @@ app.controller('navBarCtrl', function ($scope) {
 	$scope.heading = "Heading";
 	$scope.paragraph = "Paragraph";
 
-}).controller('contactCtrl', function ($scope) {
+}).controller('freequoteCtrl', function ($scope) {
 	
-	$scope.title = "Contact Us";
+	$scope.title = "Get A Free Quote";
 	$scope.loading = "Loading...";
 
 }).controller('socialIcons', function ($scope) {

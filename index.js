@@ -3,7 +3,7 @@
     var app      = express();
 
 // configuration =================
-    app.set('port', (process.env.PORT || 8080));
+    app.set('port', (process.env.PORT || 8000));
     app.use(express.static(__dirname + '/'));
 
 // application ========================

@@ -20,32 +20,11 @@ app.config(function ($routeProvider) {
 		templateUrl: 'views/about.html',
 		controller: 'aboutCtrl'
 	}).
-	when('/contact', {
-		templateUrl: 'views/contact.html',
-		controller: 'contactCtrl'
+	when('/freequote', {
+		templateUrl: 'views/freequote.html',
+		controller: 'freequoteCtrl'
 	}).
 	otherwise({
 		redirectTo: '/'
 	});
-});
-
-//http://stackoverflow.com/questions/12008908/angularjs-how-can-i-pass-variables-between-controllers
-app.service('sharedProperties', function () {
-	var allPiecesProperty = false;
-	var bases = undefined;
-
-	return {
-		getAllPiecesProperty: function () {
-			return allPiecesProperty;
-		},
-		setAllPiecesProperty: function (value) {
-			allPiecesProperty = value;
-		},
-		getBases: function () {
-			return bases;
-		},
-		setBases: function (value) {
-			bases = value;
-		}
-	};
 });
